@@ -1,0 +1,68 @@
+
+.package-card {
+    @include basic-box-shadow;
+
+    position: relative;
+    overflow: hidden;
+
+    &__photo-container {
+        overflow: hidden;
+        margin: -.5rem auto;
+        background-color: $color-white;
+    }
+
+    &__photo {
+        width: 100%;
+        opacity: 0.3;
+    }
+
+    &__details {
+        @include abscenter;
+
+        width: 80%;
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    &__text {
+        list-style-type: none;
+        line-height: 10rem;
+        color: $color-grey-dark-2;
+
+        li:not(:last-child) {
+            border-bottom: 3px solid $color-black;
+        }
+    }
+
+    &__title {
+        font-size: 5rem;
+
+        &--red {
+            background: linear-gradient(to left, $color-orange-red, $color-dark-orange-red);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    
+        &--green {
+            background: linear-gradient(to left, $color-green, $color-dark-green);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    
+        &--blue {
+            background: linear-gradient(to left, $color-blue, $color-dark-blue);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    
+        &--gold {
+            background: linear-gradient(to left, $color-light-gold, $color-dark-gold);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    }
+}

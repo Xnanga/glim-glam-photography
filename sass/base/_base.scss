@@ -1,0 +1,28 @@
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    @include basic-box-shadow;
+    
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    margin: 3rem;
+}  
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a,
+a:before,
+a:after {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}

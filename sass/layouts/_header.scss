@@ -1,0 +1,42 @@
+
+.header {
+
+    position: relative;
+    height: 95vh;
+    overflow: hidden;
+    text-align: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    &__text {
+        @include abscenter;
+        z-index: 3;
+        background: linear-gradient(to left, $color-light-gold, $color-dark-gold);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    &__heading {
+        height: 100%;
+        font-size: 8rem;
+    }
+
+    &__subheading-text {
+        font-size: 3rem;
+        vertical-align: middle;
+    }
+
+    &__video-bg {
+        background-color: $color-black;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+
+        &-content {
+            width: 100%;
+            background-size: cover;
+            z-index: 1;
+            opacity: .8;
+            }
+        }
+    }

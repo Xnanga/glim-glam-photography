@@ -1,0 +1,44 @@
+
+.photo-card {
+    @include basic-box-shadow;
+    
+    overflow: hidden;
+    border-radius: 3px;
+    border-bottom: 4px solid $color-white;
+    transition: all .6s;
+
+    &:hover {
+        border-bottom: 4px solid $color-orange-red;
+
+        & ~ .photo-card__hover-message {
+            transform: translateY(-23rem);
+            opacity: 1;
+            animation: ease-in;
+            transition: all .6s;
+            visibility: visible;
+        }
+    }
+
+    &__content {
+        background-position: cover;
+        opacity: 1;
+        transition: all .6s;
+
+        &:hover {
+            opacity: .6;
+            transform: scale(1.25);
+        }
+    }
+
+    &__hover-message {
+        color: $color-orange-red;
+        font-size: 3rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        opacity: 0;
+        animation: ease-out;
+        transition: all .6s;
+        visibility: hidden;
+    }
+
+}
