@@ -26,4 +26,9 @@
         color: $color-orange-red;
         border: 3px solid $color-orange-red;
     }
+
+    &__small {
+        width: 60%;
+        margin-top: 15rem;
+    }
 }

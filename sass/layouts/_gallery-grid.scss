@@ -1,0 +1,27 @@
+
+.gallery-row {
+    margin: 0 auto;
+
+    @include clearfix;
+
+    [class^="gallery-col-"] {
+        float: left;
+        border: 1px solid $color-black;
+    }
+
+    .gallery-col-1-of-2 {
+        max-width: (100% / 2);
+    }
+    
+    .gallery-col-1-of-3 {
+        max-width: (100% / 3);
+    }
+
+    .gallery-col-1-of-4 {
+        max-width: (100% / 4);
+    }
+    
+    .gallery-col-2-of-3 {
+        //width: calc((100% - (#{$gutter-width} * 2)) * 3);
+    }
+}

@@ -15,8 +15,8 @@ $color-dark-orange-red: darken(orangered, 20%);
 $color-blue: #66b2ff;
 $color-dark-blue: darken(#66b2ff, 20%);
 
-$color-green: #66ff66;
-$color-dark-green: darken(#66ff66, 20%);
+$color-green: #32CD32;
+$color-dark-green: darken(#32CD32, 20%);
 
 $color-light-gold: #FFD700;
 $color-dark-gold: #DAA520;
@@ -27,3 +27,5 @@ $grid-width: 80%;
 
 $gutter-width: 2rem;
 $gutter-height: 3rem;
+
+$default-unit: .1rem;

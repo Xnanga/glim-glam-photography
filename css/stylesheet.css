@@ -35,6 +35,12 @@
   .section-h2-header:hover {
     transform: rotate(-1.5deg); }
 
+.backside-h3-header {
+  color: #fff;
+  font-size: 6rem;
+  margin-top: 19rem;
+  transform: rotate(-8deg); }
+
 .section-paragraph {
   color: white;
   font-size: 2rem;
@@ -66,7 +72,16 @@ a:after {
   cursor: pointer; }
 
 .u-margin-top-small {
-  margin-top: 5rem; }
+  margin-top: 2rem !important; }
+
+.u-margin-top-section {
+  margin-top: -25vh !important; }
+
+.larger-section-height {
+  height: 150vh !important; }
+
+.u-no-padding {
+  padding: 0 !important; }
 
 .photo-card {
   -webkit-box-shadow: -11px 10px 24px 0px rgba(0, 0, 0, 0.75);
@@ -102,18 +117,19 @@ a:after {
     visibility: hidden; }
 
 .package-card {
-  -webkit-box-shadow: -11px 10px 24px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -11px 10px 24px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: -11px 10px 24px 0px rgba(0, 0, 0, 0.75);
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  backface-visibility: hidden;
+  -moz-perspective: 150rem;
+  perspective: 150rem;
+  transition: all 1.2s ease; }
   .package-card__photo-container {
     overflow: hidden;
     margin: -.5rem auto;
     background-color: #fff; }
   .package-card__photo {
     width: 100%;
-    opacity: 0.3; }
+    opacity: 0.2; }
   .package-card__details {
     position: absolute;
     top: 50%;
@@ -136,7 +152,7 @@ a:after {
       background-clip: text;
       color: transparent; }
     .package-card__title--green {
-      background: linear-gradient(to left, #66ff66, lime);
+      background: linear-gradient(to left, #32CD32, #1e7b1e);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent; }
@@ -150,6 +166,30 @@ a:after {
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent; }
+  .package-card__backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all 1.2s ease;
+    width: 100%;
+    height: 100%; }
+    .package-card__backside--orange {
+      background: linear-gradient(to top right, orangered, #992900); }
+    .package-card__backside--green {
+      background: linear-gradient(to top right, #32CD32, #1e7b1e); }
+    .package-card__backside--blue {
+      background: linear-gradient(to top right, #66b2ff, #007fff); }
+    .package-card__backside--gold {
+      background: linear-gradient(to top right, #FFD700, #DAA520); }
+  .package-card__frontside {
+    overflow: hidden;
+    transition: all 1.2s ease; }
+  .package-card:hover .package-card__backside {
+    transform: rotateY(0deg); }
+  .package-card:hover .package-card__frontside {
+    transform: rotateY(-180deg); }
 
 .cta-button {
   -webkit-box-shadow: -11px 10px 24px 0px rgba(0, 0, 0, 0.75);
@@ -174,6 +214,9 @@ a:after {
     perspective: 1000;
     color: orangered;
     border: 3px solid orangered; }
+  .cta-button__small {
+    width: 60%;
+    margin-top: 15rem; }
 
 .navigation {
   -webkit-box-shadow: -11px 10px 24px 0px rgba(0, 0, 0, 0.75);
@@ -183,8 +226,8 @@ a:after {
   top: 5vh;
   right: 5vh;
   z-index: 20;
-  width: 12rem;
-  height: 12rem;
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
   background-color: #fff; }
   .navigation__burger {
@@ -200,7 +243,37 @@ a:after {
     height: .5rem;
     opacity: 0.8; }
     .navigation__burger-lines:not(:last-child) {
-      margin-bottom: 1.5rem; }
+      margin-bottom: 1rem; }
+
+.gallery-photo {
+  font-size: 0;
+  margin: 0;
+  padding: 0; }
+  .gallery-photo__content {
+    position: relative;
+    width: 100%;
+    opacity: .8;
+    z-index: 3;
+    transition: all .3s ease; }
+    .gallery-photo__content:hover {
+      transform: scale(1.05);
+      opacity: 1;
+      z-index: 5; }
+
+.gallery-row {
+  margin: 0 auto;
+  content: "";
+  clear: both;
+  display: table; }
+  .gallery-row [class^="gallery-col-"] {
+    float: left;
+    border: 1px solid #000; }
+  .gallery-row .gallery-col-1-of-2 {
+    max-width: 50%; }
+  .gallery-row .gallery-col-1-of-3 {
+    max-width: 33.33333%; }
+  .gallery-row .gallery-col-1-of-4 {
+    max-width: 25%; }
 
 .row {
   margin: 0 auto;
@@ -254,9 +327,8 @@ a:after {
       opacity: .8; }
 
 .section {
-  height: 150vh;
+  height: 95vh;
   background-color: #202020;
-  margin-top: -25vh;
   text-align: center;
   padding: 0rem 15rem;
   padding-top: 7rem; }
