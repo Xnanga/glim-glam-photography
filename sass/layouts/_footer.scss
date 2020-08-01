@@ -1,0 +1,49 @@
+.footer {
+    position: relative;
+    height: 50vh;
+    background-color: $color-dark-black;
+    color: $color-white;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 5rem;
+
+    &__brand-logo {
+        margin-top: 10rem;
+        border: 3px solid $color-dark-gold;
+        border-radius: 25%;
+        padding: 3rem;
+        backface-visibility: hidden;
+        
+        &:hover {
+            transform: rotate(0deg);
+        }
+    }
+
+    &__links-list {
+        width: 70%;
+        margin-top: 8rem;
+        text-align: left;
+        list-style-type: none;
+        border-top: 2px solid $color-dark-gold;
+        padding-top: 1rem;
+        margin-right: -10rem;
+
+        &-item {
+            float: left;
+
+            &:not(:first-child) {
+                margin-left: 2rem;
+            }
+        }
+    }
+
+    &__description-text {
+        width: 70%;
+        margin-top: 8rem;
+        margin-left: -10rem;
+        border-top: 2px solid $color-dark-gold;
+        text-align: left;
+        padding-top: 1rem;
+        float: right;
+    }
+}

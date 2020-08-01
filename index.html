@@ -242,62 +242,83 @@
 
             <div class="contact-form__box">
 
-                <div class="row">
+                <form action="#" class="contact-form">
 
-                    <div class="col-1-of-2">
+                    <h2 class="contact-form__box-header section-h2-header">
+                        Get in Touch Today!
+                    </h2>
 
-                        <div class="contact-form-box__text">
+                    <div class="contact-form__group">
+                        <input type="text" class="contact-form__input" placeholder="Your Name" id="name" required>
+                        <label for="name" class="contact-form__label">Your Name</label>
+                    </div>
 
-                            <form action="#" class="contact-form">
-                                <h2 class="contact-form__box-header">
-                                    Get in Touch Today!
-                                </h2>
+                    <div class="contact-form__group">
+                        <input type="email" class="contact-form__input" placeholder="Your Email" id="email" required>
+                        <label for="email" class="contact-form__label">Your Email</label>
+                    </div>
 
-                                <div class="contact-form__group">
-                                    <input type="text" class="contact-form__input" placeholder="Your Name" id="name" required>
-                                    <label for="name" class="contact-form__label">Your Name</label>
-                                </div>
+                    <div class="contact-form__group">
+                        <div class="contact-form__radio-group">
+                            <input type="radio" class="contact-form__radio-input" id="one-off" name="project-type">
+                            <label for="one-off" class="contact-form__radio-label">
+                                <span class="contact-form__radio-button"></span>
+                                One-Off Project
+                            </label>
+                        </div>
 
-                                <div class="contact-form__group">
-                                    <input type="email" class="contact-form__input" placeholder="Your Email" id="email" required>
-                                    <label for="email" class="contact-form__label">Your Email</label>
-                                </div>
+                        <div class="contact-form__radio-group">
+                            <input type="radio" class="contact-form__radio-input" id="ongoing" name="project-type">
+                            <label for="ongoing" class="contact-form__radio-label">
+                                <span class="contact-form__radio-button"></span>
+                                Ongoing Project
+                        </div>
+                            </label>
+                        </div>
 
-                                <div class="contact-form__group">
-                                    <div class="contact-form__radio-group">
-                                        <input type="radio" class="contact-form__radio-input" id="one-off" name="project-type">
-                                        <label for="one-off" class="contact-form__radio-label">
-                                            <span class="contact-form__radio-button"></span>
-                                            One-Off Project
-                                        </label>
-                                    </div>
-                                    <div class="contact-form__radio-group">
-                                        <input type="radio" class="contact-form__radio-input" id="ongoing" name="project-type">
-                                        <label for="ongoing" class="contact-form__radio-label">
-                                            <span class="contact-form__radio-button"></span>
-                                            Ongoing Project
-                                    </div>
-                                        </label>
-                                    </div>
-                                    <div class="form__group ">
-                                        <button class="cta-button">Submit &rarr;</button>
-                                    </div>
-                                </div>
-
-
-                                </form>
-
-                            </div>
-
+                        <div class="contact-form__group">
+                            <button class="cta-button contact-form__cta-button u-half-width">Submit &rarr;</button>
                         </div>
 
                     </div>
+
+                  </form>
 
                 </div>
 
             </div>
 
         </section>
+
+        <footer class="footer">
+
+            <h2 class="section-h2-header footer__brand-logo">Glim Glam | <span class="header__subheading-text">Premier Glasgow Photographer</span></h2>
+
+            <div class="row">
+
+                    <div class="col-1-of-2">
+
+                        <ul class="footer__links-list">
+                            <li class="footer__links-list-item"><a href="#">Home</a></li>
+                            <li class="footer__links-list-item"><a href="#">About Us</a></li>
+                            <li class="footer__links-list-item"><a href="#">Our Packages</a></li>
+                            <li class="footer__links-list-item"><a href="#">Contact Us</a></li>
+                            <li class="footer__links-list-item"><a href="#">Privacy</a></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="col-1-of-2">
+
+                        <p class="footer__description-text">
+                            Webpage created by Jamie Peutherer as a SASS project. Feel free to use whatever you like as you please and check out <a href="https://github.com/Xnanga">my other projects on Github.</a>
+                        </p>
+
+                    </div>
+
+            </div>
+
+        </footer>
 
     </body>
 </html>
