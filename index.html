@@ -9,13 +9,33 @@
     </head>
 
     <body>
-        <nav class="navigation">
-            <ul class="navigation__burger">
-                <li class="navigation__burger-lines">&nbsp;</li>
-                <li class="navigation__burger-lines">&nbsp;</li>
-                <li class="navigation__burger-lines">&nbsp;</li>
-            </ul>
-        </nav>
+
+        <div class="navigation">
+
+            <nav class="navigation">
+                <input type="checkbox" class="navigation__checkbox" id="navigation-toggle">
+                <label for="navigation-toggle" class="navigation__toggle">
+                    <ul class="navigation__burger">
+                        <li class="navigation__burger-lines">&nbsp;</li>
+                        <li class="navigation__burger-lines">&nbsp;</li>
+                        <li class="navigation__burger-lines">&nbsp;</li>
+                    </ul>
+                </label>
+
+                <div class="navigation-background">&nbsp;</div>
+
+                <ul class="navigation-menu__list">
+                    <li class="navigation-menu__list-item"><a href="#">Home</a></li>
+                    <li class="navigation-menu__list-item"><a href="#">About Us</a></li>
+                    <li class="navigation-menu__list-item"><a href="#">Our Packages</a></li>
+                    <li class="navigation-menu__list-item"><a href="#">Contact Us</a></li>
+                    <li class="navigation-menu__list-item"><a href="#">Find Us</a></li>
+                </ul>
+
+            </nav>
+
+     </div>
+
         <header class="header">
             <div class="header__text">
                 <h1 class="header__heading">

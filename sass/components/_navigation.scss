@@ -1,16 +1,43 @@
 
 .navigation {
-    @include basic-box-shadow;
-    
-    position: fixed;
-    top: 5vh;
-    right: 5vh;
-    z-index: 20;
+    transition: all .4s;
+    text-decoration-line: center;
 
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    background-color: $color-white;
+    &__checkbox {
+        display: none;
+    }
+
+    &__checkbox:checked ~ &-background {
+        transform: scale(20);
+        animation: ease-in;
+    }
+
+    &__checkbox:checked ~ &-menu__list {
+        visibility: visible;
+        position: fixed;
+        opacity: .8;
+        transition: all .3s;
+        transition-delay: .3s;
+    }
+
+    &__checkbox:checked ~ &__burger {
+        transform: scale(0.8);
+    }
+
+    &__toggle {
+        @include light-box-shadow;
+    
+        position: fixed;
+        top: 5vh;
+        right: 5vh;
+        z-index: 20;
+    
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        background-color: $color-white;
+        cursor: pointer;
+    }
 
     &__burger {
         @include abscenter;
@@ -22,12 +49,64 @@
     &__burger-lines {
         background-color: $color-grey-dark-2;
         border-radius: 3px;
-        height: .5rem;
+        height: .3rem;
         opacity: 0.8;
+
+        transition: all .2s;
         
         &:not(:last-child) {
-            margin-bottom: 1rem;
+            margin-bottom: .75rem;
         }
     }
 
+    &:hover >* &__burger-lines {
+        transform: scale(1.2);
+        background-color: $color-dark-gold;
+
+        animation: ease-out;
+    }
+
+    &-background {
+    
+        width: 20rem;
+        height: 20rem;
+        position: fixed;
+        top: -1.6rem;
+        right: -1.6rem;
+        z-index: 15;
+        background: radial-gradient($color-light-gold, $color-dark-gold);
+        transform: scale(0.2);
+        border-radius: 50%;
+        transition: transform .7s;
+    }
+
+    &-menu__list {
+
+        visibility: hidden;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 18;
+
+        transform: translate(-50%, -50%);
+
+        list-style-type: decimal-leading-zero;
+        font-size: 5.5rem;
+        line-height: 12rem;
+
+        color: $color-white;
+        opacity: 0;
+        transition: all .2s;
+        transition-delay: .1s;
+
+        &-item {
+            transition: all .4s;
+            
+            &:hover {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+
+        }
+    }
 }
