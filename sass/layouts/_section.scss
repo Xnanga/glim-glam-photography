@@ -5,4 +5,13 @@
     text-align: center;
     padding: 0rem 15rem;
     padding-top: 7rem;
+
+    @include respond(desktop) {
+        padding-top: 26rem;
+        height: 75vh
+    }
+
+    @include respond(tab-land) {
+        padding-top: 20rem;
+    }
 }

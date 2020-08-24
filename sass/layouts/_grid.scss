@@ -6,6 +6,10 @@
 
     &:not(:last-child) {
         margin-bottom: $gutter-height;
+
+        @include respond(tab-land) {
+            margin-bottom: $gutter-height-small;
+        }
     }
 
     [class^="col-"] {
@@ -13,6 +17,15 @@
 
         &:not(:last-child) {
             margin-right: $gutter-width;
+
+            @include respond(tab-land) {
+                margin-right: 0rem;
+                margin-bottom: $gutter-width-small;
+            }
+        }
+
+        @include respond(tab-land) {
+            width: 100% !important;
         }
     }
 
@@ -31,4 +44,5 @@
     .col-2-of-3 {
         //width: calc((100% - (#{$gutter-width} * 2)) * 3);
     }
+
 }

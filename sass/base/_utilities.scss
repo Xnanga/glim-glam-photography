@@ -26,14 +26,30 @@
 
 .u-margin-top-small {
     margin-top: 2rem !important;
+
+    @include respond(tab-land) {
+        margin-top: 6rem !important;
+    }
 }
 
 .u-margin-top-section {
-    margin-top: -25vh !important;
+    margin-top: -25vh;
+
+    @include respond(desktop) {
+        margin-top: -42vh;
+    }
+
+    @include respond(tab-land) {
+        margin-top: -54vh;
+    }
 }
 
 .larger-section-height {
     height: 150vh !important;
+
+    @include respond(tab-land) {
+        height: 225vh !important;
+    }
 }
 
 .u-no-padding {

@@ -10,6 +10,12 @@
 
     transition: all 1.2s ease;
 
+    @include respond(tab-land) {
+        width: 50%;
+        height: 40rem;
+        margin: 0 auto;
+    }
+
     &__photo-container {
         overflow: hidden;
         margin: -.5rem auto;
@@ -24,15 +30,24 @@
     &__details {
         @include abscenter;
 
-        width: 80%;
-        font-size: 3rem;
+        width: 70%;
+        font-size: 2.5rem;
         font-weight: 500;
+
+        @include respond(desktop) {
+            width: 60%;
+            font-size: 2rem;
+        }
     }
 
     &__text {
         list-style-type: none;
-        line-height: 10rem;
+        line-height: 8rem;
         color: $color-grey-dark-2;
+
+        @include respond(desktop) {
+            line-height: 6rem;
+        }
 
         li:not(:last-child) {
             border-bottom: 3px solid $color-black;
@@ -40,7 +55,11 @@
     }
 
     &__title {
-        font-size: 5rem;
+        font-size: 3.5rem;
+
+        @include respond(desktop) {
+            font-size: 3rem;
+        }
 
         &--red {
             background: linear-gradient(to left, $color-orange-red, $color-dark-orange-red);

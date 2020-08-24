@@ -16,6 +16,11 @@
                           transparent 50%),
                           url(../images/city-large-3.jpg);
 
+                          @include respond(desktop) {
+                            margin-top: -25rem;
+                            height: 110%;
+                        }
+
         &-header {
             margin-top: 0;
             font-size: 6rem;
@@ -105,6 +110,10 @@
     &__cta-button {
         margin-top: 5rem;
         border: none;
+
+        @include respond(tab-land) {
+            margin-top: 8rem !important;
+        }
     }
 
 }

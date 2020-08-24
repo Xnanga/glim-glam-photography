@@ -7,6 +7,11 @@
     border-bottom: 4px solid $color-white;
     transition: all .6s;
 
+    @include respond(tab-land){
+        width: 60%;
+        margin: 0 auto;
+    }
+
     &:hover {
         border-bottom: 4px solid $color-orange-red;
 

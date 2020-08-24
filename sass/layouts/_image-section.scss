@@ -11,4 +11,18 @@
     text-align: center;
     padding: 0rem 15rem;
     padding-top: 10rem;
+
+    @include respond(desktop) {
+        height: 105vh;
+        padding-top: 4rem;
+    }
+
+    @include respond(tab-land) {
+        height: 205vh;
+        margin-top: -25rem;
+        padding-top: 4rem;
+        clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
